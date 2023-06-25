@@ -33,6 +33,7 @@ jobs:
       checks: read
       contents: write
       actions: write
+      pull-requests: write
     steps:
       - id: automerge
         name: automerge
@@ -40,3 +41,7 @@ jobs:
         env:
           MERGE_LABELS: "merge"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: delete branch
+        uses: SvanBoxel/delete-merged-branch@v1.4.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
