@@ -1,1 +1,3 @@
 # test
+
+Test auto-merge
