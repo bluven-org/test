@@ -32,13 +32,9 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - name: Auto Merge
-        uses: squalrus/merge-bot@v0.4.5
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: true
-          labels: merge
-          checks_enabled: true
-          method: merge
-          delete_source_branch: true
-          
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+          MERGE_LABELS: "merge"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
