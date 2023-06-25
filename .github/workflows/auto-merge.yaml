@@ -20,16 +20,19 @@ on:
         description: Pull Request Number
         required: false
 
-permissions:
-  checks: read
-  contents: write
-  actions: write
+# permissions:
+#   checks: read
+#   contents: write
+#   actions: write
 
 jobs:
   auto-merge:
     name: Auto Merge
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: 
+      checks: read
+      contents: write
+      actions: write
     steps:
       - id: automerge
         name: automerge
