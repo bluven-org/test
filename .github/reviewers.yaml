@@ -1,0 +1,9 @@
+reviewers:
+  # The default reviewers
+  defaults:
+    - bluven
+    - yanjianbo1983
+
+options:
+  ignore_draft: true
+  enable_group_assignment: false
