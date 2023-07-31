@@ -1,9 +1,3 @@
 # test
 
-Test auto-merge
-
-Test permission
-
-Test delete branch
-
-Test github auto delete
+Test auto-merge and auto-review-assign
