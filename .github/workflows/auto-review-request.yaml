@@ -30,5 +30,3 @@ jobs:
       pull-requests: write
     steps:
       - uses: kentaro-m/auto-assign-action@v1.2.5
-        with:
-          configuration-path: '.github/reviewers2.yaml' # Only needed if you use something other than .github/auto_assign.yml
